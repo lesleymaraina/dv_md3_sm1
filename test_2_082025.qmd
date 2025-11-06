@@ -1,0 +1,442 @@
+---
+title: "Visualizing Numerical Variables in Biomedical Research"
+author: "<br><br><span style='font-size:25px;'><strong>Lesley Chapman Hannah, Ph.D., M.S.</strong></span><br>College of Graduate Studies<br>Northeast Ohio Medical University"
+
+format: 
+  revealjs:
+    #theme: solarized
+    css: style.css
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/Flame.jpg
+    #css: styles.css
+    
+---
+
+## Lecture Outline
+
+
+- Distinguishing numeric vs. categorical variables in clinical datasets
+
+- What numeric values represent: physiologic processes, exposure intensity, or outcome magnitude
+
+- Types of numeric variables: continuous (creatinine, systolic BP) vs. discrete (cell counts, days
+
+- How biostatisticians see data before modeling — visual inspection as a form of scientific reasoning
+
+::: footer
+
+:::
+
+## <span style="font-size:80%">Recap: Categorical vs. Numerical</span> {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**Categorical Variables (Qualitative)**
+
+- Definition: Descriptors of qualities or categories of data
+
+  - Represent labels, names, or groups
+
+
+- Values: 
+  
+  - Text 
+  - Numbers [i.e.: patient IDs, zip codes]
+
+- Utility: Can count frequencies, mode, or proportions
+
+- Examples:
+  - Treatment group: Placebo, Drug A, Drug B
+
+
+:::
+
+::: {.column width="50%"}
+**Numerical Variables (Quantitative)**
+
+- Definition: represent quantities that are measurable and numeric
+
+- Values: Numbers where mathematical operations(addition, subtraction, averaging) make sense
+
+- Types:
+
+  - Discrete: Countable values 
+
+    - Number of hospital visits
+
+  - Continuous: Measurable values that can take on decimals 
+
+    - Blood pressure, cholesterol level
+
+- Utility: allows for a wide range of statistical analyses
+
+- Examples:
+
+  - Serum glucose level (mg/dL)
+
+
+
+:::
+
+:::
+::: footer
+:::
+
+## <span style="font-size:80%">Recap: Categorical vs. Numerical</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+**Numerical Variables (Quantitative)**
+
+- Definition: represent quantities that are measurable and numeric
+
+- Values: Numbers where mathematical operations(addition, subtraction, averaging) make sense
+
+- Types:
+
+  - Discrete: Countable values 
+
+    - Number of hospital visits
+
+  - Continuous: Measurable values that can take on decimals 
+
+    - Blood pressure, cholesterol level
+
+- Utility: allows for a wide range of statistical analyses
+
+- Examples:
+
+  - Serum glucose level (mg/dL)
+
+
+
+:::
+
+:::
+::: footer
+:::
+
+
+
+## <span style="font-size:80%">Understanding What Numbers Represent</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+- Numeric variables quantify magnitude, intensity, or duration of biological phenomena
+
+- Each number reflects a measurable process or state:
+
+  - Glucose $\rightarrow$ metabolic control
+
+  - Creatinine $\rightarrow$ renal filtration
+
+  - Ejection fraction $\rightarrow$ cardiac performance
+
+- Biomedical inference begins with understanding what the number means physiologically, not statistically
+
+- Cognitive emphasis: A number’s interpretability depends on context — unit, scale, reference range
+
+
+:::
+
+:::
+::: footer
+:::
+
+
+
+## <span style="font-size:80%">Why Numeric Data Visualization Matters</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+- Almost every biomedical dataset contains numeric measures that capture biological, clinical, or operational observations
+
+  - Clinical: vital signs, laboratory values, dosage levels
+
+  - Molecular: gene expression counts, protein concentrations
+
+  - Operational: procedure durations, cost per encounter
+
+
+:::
+
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%">Data Visualization: Seeing meaning in numbers</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+Numeric visualization:
+
+- Supports scientific reasoning through visual comparison: spotting differences in magnitude, rate, or variability across contexts
+- Promotes transparency and trust by letting stakeholders visually assess data integrity and trends
+- Framing idea: Numeric visualization is visual reasoning with quantities — the foundation for credible biomedical insight
+
+
+:::
+
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%">Data Visualization: Seeing meaning in numbers</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+Numeric visualization:
+
+- Makes quantities visible — transforming raw numbers into interpretable biomedical meaning
+- Serves as an early diagnostic lens to detect outliers, implausible values, or data entry errors
+- Allows analysts to see structure, scale, and variation directly — long before statistical modeling is considered
+
+:::
+
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%">Numeric Data in Context</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+- Numeric values have context:
+
+  - Clinical thresholds: normal vs abnormal (e.g., glucose ≥ 126 mg/dL)
+
+  - Temporal frame: before vs after intervention
+
+  - Population frame: adult vs pediatric norms
+
+
+- Visualize with reference markers or shaded normal ranges when relevant
+
+
+:::
+
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%">Numeric Data in Context</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+
+
+:::
+
+::: {.column width="100%"}
+- Annotate with context (mean line, target zone, or standard-of-care threshold)
+- Encourage consistency in units and axis scaling across related visuals
+- Design goal: viewers should immediately know what “normal” looks like
+
+:::
+
+:::
+::: footer
+:::
+
+
+
+
+
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## <span style="font-size:80%">Example: Serum Creatinine Distribution</span> {.smaller}
+
+::: columns
+::: {.column .small}
+
+**Concept**: numeric data visualization reveals biological patterns and data integrity within a real biomedical measure
+
+**Dataset**: Serum creatinine values (mg/dL) from 500 patients — a direct numeric indicator of renal filtration
+
+**Visualization**: Histogram showing the distribution of values across the patient population
+:::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+set.seed(123)
+creatinine <- c(rnorm(450, mean = 1.0, sd = 0.25),   # typical renal function
+                rnorm(40, mean = 2.2, sd = 0.4),     # impaired subgroup
+                rnorm(10, mean = 5.5, sd = 0.5))     # extreme outliers
+
+library(ggplot2)
+
+ggplot(data.frame(creatinine), aes(x = creatinine)) +
+  geom_histogram(binwidth = 0.2, fill = "#2c7bb6", color = "white", boundary = 0) +
+  labs(
+    title = "Serum Creatinine Levels Across 500 Patients",
+    x = "Serum Creatinine (mg/dL)",
+    y = "Number of Patients"
+  ) +
+  theme_minimal(base_size = 14)
+```
+:::
+:::
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## <span style="font-size:80%">Example: Serum Creatinine Distribution</span> {.smaller}
+
+::: columns
+::: {.column .small}
+
+**Histogram**:
+
+- Central peak near 0.8–1.0 mg/dL → expected range for normal renal function
+
+- Right-hand tail extending beyond 2.0 mg/dL → subgroup with possible renal impairment
+
+- Extreme outliers (>5 mg/dL) → may represent dialysis patients, transcription errors, or unit inconsistencies
+
+**Plot interpretation**:
+
+- Even a simple numeric plot surfaces biological substructure (healthy vs. impaired) and data quality signals simultaneously
+
+- Visualization transforms numbers into an interpretable clinical landscape — far more revealing than a table or summary statistic
+
+:::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+set.seed(123)
+creatinine <- c(rnorm(450, mean = 1.0, sd = 0.25),   # typical renal function
+                rnorm(40, mean = 2.2, sd = 0.4),     # impaired subgroup
+                rnorm(10, mean = 5.5, sd = 0.5))     # extreme outliers
+
+library(ggplot2)
+
+ggplot(data.frame(creatinine), aes(x = creatinine)) +
+  geom_histogram(binwidth = 0.2, fill = "#2c7bb6", color = "white", boundary = 0) +
+  labs(
+    title = "Serum Creatinine Levels Across 500 Patients",
+    x = "Serum Creatinine (mg/dL)",
+    y = "Number of Patients"
+  ) +
+  theme_minimal(base_size = 14)
+```
+:::
+:::
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+
+
+
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+## <span style="font-size:80%">Summary</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+- Numeric visualization transforms quantities into visible evidence
+
+- Understand what numbers represent biologically before encoding them visually
+
+- Maintain context and scale integrity — avoid misleading visuals
+
+- Visualization is the first step of statistical modeling, not an afterthought
+:::
+
+:::
+::: footer
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
